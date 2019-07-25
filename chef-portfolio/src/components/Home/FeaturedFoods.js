@@ -4,7 +4,11 @@ import './Home.css'
 const FeaturedFoods = ({ featuredFoods }) => {
      return(
         <div className='featured-container'>
-            <h2>Diplaying Featured Foods</h2>
+            <button className='left-slider'>◄</button>
+            <div className='featured-content'>
+                <h2>Diplaying Featured Foods Here</h2>
+            </div>
+            <button className='right-slider'>►</button>
         </div>
     )
 }

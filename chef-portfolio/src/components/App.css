@@ -44,3 +44,34 @@
 .header button{
 
 }
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-content: center;
+  
+}
+
+.footer-item-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.footer-item-container nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-item-container nav a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.footer-item-container h3 {
+  font-weight: bold;
+  font-size: 30px;
+}
