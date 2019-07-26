@@ -2,15 +2,15 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    justify-content: space-between;
-    margin: 20px 30px;
+    margin: 20px 0;
     border: 1px solid yellow;
+    width: 80%;
+    height: 200px;
 }
 
 .featured-content{
     display: flex;
-    width: 80%;
-    height: 200px;
+    width: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -21,6 +21,7 @@
     justify-content: center;
     margin: 20px 30px;
     border: 1px solid green;
+    width: 90%;
 }
 
 .new-foods-content{

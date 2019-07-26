@@ -13,10 +13,10 @@ function App() {
           Hamburger
         </button>
       </div>
-      <div>
+      <div className='featured-foods'>
         <FeaturedFoods />
       </div>
-      <div>
+      <div className='new-recipes'>
         <NewRecipes />
       </div>
       <div className='footer'>
