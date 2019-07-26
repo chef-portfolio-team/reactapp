@@ -11,7 +11,7 @@ export const ADD_FOOD_FAILED = 'ADD_FOOD_FAILED'
 export const getFood = () => dispatch => {
     dispatch({ type: FETCHING })
     axios
-      .get('http://localhost:3333/foods')
+      .get('https://chef-portfolio-webtp6.herokuapp.com/api/posts/all')
       .then(response => {
         dispatch({ type: FETCHING_SUCCESS, payload: response.data})
       })

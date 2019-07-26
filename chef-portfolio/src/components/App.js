@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import FeaturedFoods from './Home/FeaturedFoods'
 import NewRecipes from './Home/NewRecipes'
+import Slider from '../components/Home/Slider'
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
         </button>
       </div>
       <div>
-        <FeaturedFoods />
+        {/* <FeaturedFoods /> */
+        }
+        <Slider/>
       </div>
       <div>
         <NewRecipes />
