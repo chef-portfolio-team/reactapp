@@ -16,17 +16,43 @@ class Slider extends React.Component {
         const SliderWrapper = styled.div`
         
         li{
-            list-style:none;     
+            list-style:none;
+            display: flex;
+            flex-direction: row;
+            justify-c2ontent: center;
+            justify-content: space-between;
+            margin: 20px 30px;
+            // border: 1px solid yellow;
+               
         }
+        img{
+            height:50px;
+            width:50px;
+        }
+
+        `;
+
+            const SliderInfo = styled.div`
+            display: flex;
+            width: 80%;
+            height: 200px;
+            justify-content: center;
+            align-items: center;
+            overflow-x:hidden; 
+            border:2px solid yellow; 
 
         `;
 
         return (
             <SliderWrapper>
+                <SliderInfo>
                 {this.props.foods.map((food) => {
                     return (
                         <div key={food.id}>
                             <li>{food.chef_name}</li>
+                            <li>{food.recipe_title}</li>
+                            <img src = {food.item_photo}/>
+                            <li>{food.chef_location}</li>
                         </div>
 
 
@@ -35,6 +61,7 @@ class Slider extends React.Component {
 
 
                 })}
+                    </SliderInfo>
             </SliderWrapper>
         )
     }
