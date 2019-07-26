@@ -2,40 +2,52 @@ import React from 'react';
 import './App.css';
 import FeaturedFoods from './Home/FeaturedFoods'
 import NewRecipes from './Home/NewRecipes'
+import About from './About/About'
+import { Link, Route } from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
       <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow&display=swap" rel="stylesheet"></link>
+      <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"></link>
+      
+      {/* Header */}
       <div className='header'>
-        <h1>Chef Portfolio</h1>
+        <Link to='/'><h1>Chef Portfolio</h1></Link>
         <button className='hamburger'>
           Hamburger
         </button>
       </div>
+
+      {/* Components */}
       <div className='featured-foods'>
-        <FeaturedFoods />
+        <Route path='/' exact render={(props) => <FeaturedFoods {...props} />} />
       </div>
-      <div className='new-recipes'>
-        <NewRecipes />
+      <div className='new-recipes' >
+        <Route path='/' exact render={(props) => <NewRecipes {...props} />} className='new-recipes'/>
       </div>
+      <div className='about'  >
+        <Route path='/about' exact render={(props) => <About {...props} />} className='about'/>
+      </div>
+
+      {/* Footer */}
       <div className='footer'>
         <div className='footer-item-container'>
           <h3>About</h3>
           <nav>
-            <a href='about'>About</a>
-            <a href='team'>Team</a>
-            <a href='contact'>Contact Us</a>
+            <Link to='/about'>About</Link>
+            <Link to='/team'>Team</Link>
+            <Link to='/contact'>Contact</Link>
           </nav>
         </div>
         <div className='footer-item-container'>
-          <h3>Connect</h3>
-          <nav>
-            <a href='fa'>FaceBook</a>
-            <a href='pin'>Pinterest</a>
-            <a href='twt'>Twitter</a>
-            <a href='insta'>Instagram</a>
-          </nav>
+        <h3>Connect</h3>
+            <nav>
+                <a href='https://www.facebook.com/'>FaceBook</a>
+                <a href='https://www.pinterest.com/'>Pinterest</a>
+                <a href='https://www.twitter.com/'>Twitter</a>
+                <a href='https://www.instagram.com/'>Instagram</a>
+            </nav>
         </div>
       </div>
     </div>

@@ -4,35 +4,9 @@
   flex-direction: column;
   justify-content: center;
   font-family: 'Londrina Shadow', cursive;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.featured-foods{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.new-recipes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.App-link {
-  color: #61dafb;
+  background-image: url('../images/marble-background.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
 }
 
 @keyframes App-logo-spin {
@@ -54,10 +28,32 @@
 
 .header h1{
   color: white;
+  text-decoration: underline black;
 }
 
 .header button{
 
+}
+
+.featured-foods{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-recipes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer{

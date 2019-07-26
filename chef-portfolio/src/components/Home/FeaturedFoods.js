@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
 
-const FeaturedFoods = ({ featuredFoods }) => {
+const FeaturedFoods = featuredFoods => {
      return(
         <div className='featured-container'>
             <button className='left-slider'>◄</button>

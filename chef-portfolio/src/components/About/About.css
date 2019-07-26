@@ -1,0 +1,29 @@
+.about-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+    border: 1px solid red;
+    width: 80%;
+    height: 700px;
+}
+
+.about-container h1{
+    font-size: 80px;
+}
+
+.portfolio h2{
+    font-size: 30px;
+}
+
+.portfolio{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.portfolio p{
+    width: 60%;
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+}
