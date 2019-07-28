@@ -3,6 +3,8 @@ import './App.css';
 import FeaturedFoods from './Home/FeaturedFoods'
 import NewRecipes from './Home/NewRecipes'
 import About from './About/About'
+import Team from './About/Team'
+import Contact from './About/Contact'
 import { Link, Route } from "react-router-dom"
 
 function App() {
@@ -10,7 +12,7 @@ function App() {
     <div className="App">
       <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow&display=swap" rel="stylesheet"></link>
       <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"></link>
-      
+
       {/* Header */}
       <div className='header'>
         <Link to='/'><h1>Chef Portfolio</h1></Link>
@@ -28,6 +30,12 @@ function App() {
       </div>
       <div className='about'  >
         <Route path='/about' exact render={(props) => <About {...props} />} className='about'/>
+      </div>
+      <div className='team'  >
+        <Route path='/team' exact render={(props) => <Team {...props} />} className='about'/>
+      </div>
+      <div className='contact'  >
+        <Route path='/contact' exact render={(props) => <Contact {...props} />} className='about'/>
       </div>
 
       {/* Footer */}
