@@ -10,7 +10,7 @@
 .featured-content{
     display: flex;
     width: 80%;
-    height: 200px;
+    height: 1000px;
     justify-content: center;
     align-items: center;
 }

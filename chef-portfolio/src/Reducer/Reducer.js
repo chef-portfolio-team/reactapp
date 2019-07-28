@@ -15,6 +15,22 @@ export default function(state = initialState, action) {
                 fetchingFood: true,
                 error: null,
             }
+        case FETCHING_SUCCESS:
+            
+            return {
+                ...state,
+                fetchingFood: false,
+                error: null,
+                foods: action.payload,
+
+            }
+        case FETCHING_FAILED:
+            return {
+                ...state,
+                fetchingFood: false,
+                error: action.payload
+            
+            }
         default:
             return state
     }
