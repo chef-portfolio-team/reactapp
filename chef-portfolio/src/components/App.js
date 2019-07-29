@@ -5,6 +5,7 @@ import NewRecipes from './Home/NewRecipes'
 import About from './About/About'
 import Team from './About/Team'
 import Contact from './About/Contact'
+import Slider from './Home/Slider'
 import { Link, Route } from "react-router-dom"
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
 
       {/* Components */}
       <div className='featured-foods'>
-        <Route path='/' exact render={(props) => <FeaturedFoods {...props} />} />
+        <Route path='/' exact render={(props) => <Slider {...props} />} />
       </div>
       <div className='new-recipes' >
         <Route path='/' exact render={(props) => <NewRecipes {...props} />} className='new-recipes'/>
