@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import FeaturedFoods from './Home/FeaturedFoods'
 import NewRecipes from './Home/NewRecipes'
 import About from './About/About'
 import Team from './About/Team'
@@ -33,10 +32,10 @@ function App() {
         <Route path='/about' exact render={(props) => <About {...props} />} className='about'/>
       </div>
       <div className='team'  >
-        <Route path='/team' exact render={(props) => <Team {...props} />} className='about'/>
+        <Route path='/team' exact render={(props) => <Team {...props} />} className='team'/>
       </div>
       <div className='contact'  >
-        <Route path='/contact' exact render={(props) => <Contact {...props} />} className='about'/>
+        <Route path='/contact' exact render={(props) => <Contact {...props} />} className='contact'/>
       </div>
 
       {/* Footer */}

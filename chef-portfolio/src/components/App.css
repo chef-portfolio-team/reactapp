@@ -49,7 +49,21 @@
   justify-content: center;
 }
 
-.about{
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -27,3 +27,61 @@
     font-family: 'Muli', sans-serif;
     font-size: 20px;
 }
+
+.team-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+    border: 1px solid red;
+    width: 80%;
+    height: 1100px;
+}
+
+.team-container h1{
+    font-size: 80px;
+}
+
+.teammate {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.contact-container h1 {
+    font-size: 100px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 40px;
+    padding: 10px 0;
+}
+
+.teammate-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+.teammate-info h2 {
+    font-size: 60px;
+}
+
+
+
