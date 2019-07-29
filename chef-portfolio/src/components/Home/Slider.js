@@ -31,7 +31,7 @@ class Slider extends React.Component {
             list-style:none;
             display: flex;
             flex-direction: row;
-            justify-c2ontent: center;
+            justify-content: center;
             justify-content: space-between;
             margin: 20px 30px;
             //  border: 1px solid red;

@@ -23,7 +23,7 @@ function App() {
       </div>
 
       {/* Components */}
-      <div className='featured-foods'>
+      <div className='slider'>
         <Route path='/' exact render={(props) => <Slider {...props} />} />
       </div>
       <div className='new-recipes' >
