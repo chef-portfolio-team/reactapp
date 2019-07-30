@@ -6,6 +6,8 @@ import Team from './About/Team'
 import Contact from './About/Contact'
 import ChefContact from './About/ChefContact'
 import Slider from './Home/Slider'
+import Login from './Login/Login'
+import Register from './Login/Registration'
 import { Link, Route } from "react-router-dom"
 
 function App() {
@@ -41,6 +43,12 @@ function App() {
       </div>
       <div className='contact'>
         <Route path='/team-contact' exact render={(props) => <Contact {...props} />} className='team-contact-route'/>
+      </div>
+      <div className='login'>
+        <Route path='/login' exact render={(props) => <Login {...props} />} className='login-contact-route'/>
+      </div>
+      <div className='register'>
+        <Route path='/register' exact render={(props) => <Register {...props} />} className='register-contact-route'/>
       </div>
 
       {/* Footer */}
