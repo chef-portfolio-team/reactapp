@@ -50,12 +50,6 @@ class App extends React.Component {
           </Switch>
 
           {/* Components */}
-      <div className='slider'>
-        <Route path='/' exact render={(props) => <Slider {...props} />} />
-      </div>
-      <div className='new-recipes'>
-        <Route path='/' exact render={(props) => <Recipes {...props} />} className='new-recipes-route'/>
-      </div>
       <div className='about'  >
         <Route path='/about' exact render={(props) => <About {...props} />} className='about-route'/>
       </div>
@@ -77,7 +71,7 @@ class App extends React.Component {
         </div>
 
         {/* Footer */}
-      <div className='footer'>
+      {/* <div className='footer'>
         <div className='footer-item-container'>
           <h3>About</h3>
           <nav>
@@ -96,7 +90,7 @@ class App extends React.Component {
                 <a href='https://www.instagram.com/' class="fa fa-instagram"></a>
             </nav>
         </div>
-      </div>
+      </div> */}
         </Router>
 
       
