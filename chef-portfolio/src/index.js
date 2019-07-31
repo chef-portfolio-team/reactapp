@@ -7,6 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './Reducer/Reducer';
 // import logger from 'redux-logger'
+import { BrowserRouter } from 'react-router-dom'
 
 const logger = (store) => (next) => (action) => {
 	console.log('Prev State', store.getState())
@@ -25,7 +26,9 @@ const store = createStore (
 
 ReactDOM.render(
     <Provider store={store}>
+      <BrowserRouter>
         <App />
+        </BrowserRouter> 
     </Provider>,
     document.getElementById('root')
 );

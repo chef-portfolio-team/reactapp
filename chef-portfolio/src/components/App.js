@@ -1,48 +1,53 @@
 import React from 'react';
 import './App.css';
-import FeaturedFoods from './Home/FeaturedFoods'
-import NewRecipes from './Home/NewRecipes'
-import Slider from '../components/Home/Slider'
 
-function App() {
-  return (
-    <div className="App">
-      <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow&display=swap" rel="stylesheet"></link>
-      <div className='header'>
-        <h1>Chef Portfolio</h1>
-        <button className='hamburger'>
-          Hamburger
-        </button>
-      </div>
-      <div>
-        {/* <FeaturedFoods /> */
-        }
-        <Slider/>
-      </div>
-      <div>
-        <NewRecipes />
-      </div>
-      <div className='footer'>
-        <div className='footer-item-container'>
-          <h3>About</h3>
-          <nav>
-            <a href='about'>About</a>
-            <a href='team'>Team</a>
-            <a href='contact'>Contact Us</a>
-          </nav>
+import Home from '../components/Home'
+import Logo from '../img/logo.png'
+import SideBar from '../components/Home/Sidebar'
+import "../css/Slider.css"
+import Toggle from '../components/Home/Sidebar'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Login from '../components/Login'
+import Register from '../components/Registration'
+
+class App extends React.Component {
+
+
+  render() {
+    return (
+      
+      <div className="App">
+        <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow&display=swap" rel="stylesheet"></link>
+        
+        <Router>
+        <div id="App">
+        
+          <div className='header'>
+            <img src={Logo} />
+            <div className='hamburger'>
+              <nav>
+                <ul>
+                  <li><Link to={'/'} className="nav-link">Home</Link></li>
+                  <li><Link to={'/login'} className="nav-link">Login</Link></li>
+                  <li><Link to={'/Register'} className="nav-link">Register</Link></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <Switch>
+                    <Route exact path='/' component = {Home}/>
+                    <Route path='/Login' component={Login} />
+                    <Route path='/Register' component={Register} />
+          </Switch>
         </div>
-        <div className='footer-item-container'>
-          <h3>Connect</h3>
-          <nav>
-            <a href='fa'>FaceBook</a>
-            <a href='pin'>Pinterest</a>
-            <a href='twt'>Twitter</a>
-            <a href='insta'>Instagram</a>
-          </nav>
-        </div>
+        </Router>
+
+      
       </div>
-    </div>
-  );
+
+        
+    );
+  }
 }
 
 export default App;
