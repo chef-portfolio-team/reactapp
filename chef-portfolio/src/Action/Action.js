@@ -43,7 +43,7 @@ export const addFood = newSmurf => dispatch => {
   
 export const register = creds => dispatch => {
   dispatch({type:REGISTER_START}); 
-  return axios.post("https://betterprofessor.herokuapp.com/api/register", creds).then(response => {console.log(response);dispatch({type:REGISTER_SUCCESS});
+  return axios.post("https://chef-portfolio-webtp6.herokuapp.com/api/auth/register", creds).then(response => {console.log(response);dispatch({type:REGISTER_SUCCESS});
   return true;
 })
 
@@ -52,7 +52,7 @@ export const register = creds => dispatch => {
 
 export const login = creds => dispatch => {
   dispatch({type:LOGIN_START});
-  return axios.post("https://betterprofessor.herokuapp.com/api/login", creds).then(response => {localStorage.setItem('token',
+  return axios.post("https://chef-portfolio-webtp6.herokuapp.com/api/auth/login", creds).then(response => {localStorage.setItem('token',
   response.data.token);
   dispatch({type:LOGIN_SUCCESS});
   return true;
