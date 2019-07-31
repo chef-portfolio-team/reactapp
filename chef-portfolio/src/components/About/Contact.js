@@ -25,9 +25,8 @@ const Contact = contactInfo => {
                 <div className='teammate-info'>
                     <h2>Shaun Kolich</h2>
                     <div className='contact-info'>
-                        <a href='' className='github'>GitHub</a>
-                        <a href='' className='linkedin'>LinkedIn</a>
-                        <a href='' className='twitter'>Other</a>
+                        <a href='https://github.com/ShaunKolich' className='github'>GitHub</a>
+                        <a href='https://www.linkedin.com/in/shaun-kolich-98517450/' className='linkedin'>LinkedIn</a>
                     </div>
                 </div>
                 <div className='teammate-info'>

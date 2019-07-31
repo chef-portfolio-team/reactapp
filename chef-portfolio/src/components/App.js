@@ -1,36 +1,60 @@
 import React from 'react';
 import './App.css';
-import NewRecipes from './Home/NewRecipes'
+import Recipes from './Home/Recipes'
 import About from './About/About'
 import Team from './About/Team'
 import Contact from './About/Contact'
 import ChefContact from './About/ChefContact'
 import Slider from './Home/Slider'
-import Login from './Login/Login'
-import Register from './Login/Registration'
-import { Link, Route } from "react-router-dom"
+import Home from '../components/Home'
+import Logo from '../img/logo.png'
+import SideBar from '../components/Home/Sidebar'
+import "../css/Slider.css"
+import Toggle from '../components/Home/Sidebar'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Login from '../components/Login'
+import Register from '../components/Registration'
 
-function App() {
-  return (
-    <div className="App">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-      <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet" />
-      <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet" />
+class App extends React.Component {
 
-      {/* Header */}
-      <div className='header'>
-        <Link to='/'><h1>Chef Portfolio</h1></Link>
-        <button className='hamburger'>
-          Hamburger
-        </button>
-      </div>
 
-      {/* Components */}
+  render() {
+    return (
+      
+      <div className="App">
+        <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow&display=swap" rel="stylesheet"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet" />
+
+        <Router>
+        <div id="App">
+        
+            {/* Header */}
+          <div className='header'>
+            <img src={Logo} />
+            <div className='hamburger'>
+              <nav>
+                <ul>
+                  <li><Link to={'/'} className="nav-link">Home</Link></li>
+                  <li><Link to={'/login'} className="nav-link">Login</Link></li>
+                  <li><Link to={'/Register'} className="nav-link">Register</Link></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <Switch>
+                    <Route exact path='/' component = {Home}/>
+                    <Route path='/Login' component={Login} />
+                    <Route path='/Register' component={Register} />
+          </Switch>
+
+          {/* Components */}
       <div className='slider'>
         <Route path='/' exact render={(props) => <Slider {...props} />} />
       </div>
       <div className='new-recipes'>
-        <Route path='/' exact render={(props) => <NewRecipes {...props} />} className='new-recipes-route'/>
+        <Route path='/' exact render={(props) => <Recipes {...props} />} className='new-recipes-route'/>
       </div>
       <div className='about'  >
         <Route path='/about' exact render={(props) => <About {...props} />} className='about-route'/>
@@ -50,8 +74,9 @@ function App() {
       <div className='register'>
         <Route path='/register' exact render={(props) => <Register {...props} />} className='register-contact-route'/>
       </div>
+        </div>
 
-      {/* Footer */}
+        {/* Footer */}
       <div className='footer'>
         <div className='footer-item-container'>
           <h3>About</h3>
@@ -72,8 +97,14 @@ function App() {
             </nav>
         </div>
       </div>
-    </div>
-  );
+        </Router>
+
+      
+      </div>
+
+        
+    );
+  }
 }
 
 export default App;

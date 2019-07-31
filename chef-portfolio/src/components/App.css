@@ -2,11 +2,26 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   font-family: 'Lobster', cursive;
-  background-image: url('../images/marble-background.jpg');
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  color:white;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  
+}
+
+.App-link {
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -24,6 +39,8 @@
   justify-content: space-between;
   padding: 20px;
   background-color: black;
+  border:2px solid red;
+  color:white;
 }
 
 .header h1{
@@ -42,8 +59,6 @@
 .new-recipes {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .chef-contact {
@@ -72,6 +87,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.header button i{
+height:100px;
+width: 100px;
 }
 
 .footer{
@@ -110,7 +129,7 @@
 .footer-item-container nav a {
   font-size: 20px;
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
   padding: 5px 0;
 }
@@ -121,10 +140,6 @@
   color: black;
   font-weight: bold;
   padding: 10px 20px;
-}
-
-.facebook {
-  color: blue;
 }
 
 .footer-item-container h3 {

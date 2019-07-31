@@ -6,8 +6,18 @@ import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './Reducer/Reducer';
-import logger from 'redux-logger'
-import { BrowserRouter as Router } from 'react-router-dom'
+// import logger from 'redux-logger'
+import { BrowserRouter } from 'react-router-dom'
+
+const logger = (store) => (next) => (action) => {
+	console.log('Prev State', store.getState())
+	console.log('Action', action)
+	
+	// moves us to the next middleware function
+	next(action)
+
+	console.log('New State', store.getState())
+}
 
 const store = createStore (
     reducer,
@@ -16,9 +26,9 @@ const store = createStore (
 
 ReactDOM.render(
     <Provider store={store}>
-        <Router>
+        <BrowserRouter>
             <App />
-        </Router>
+        </BrowserRouter> 
     </Provider>,
     document.getElementById('root')
 );

@@ -39,6 +39,7 @@ class Slider extends React.Component {
              font-size:12px;
              line-height:-1;
              color:white;
+             
                
         }
         img{
@@ -68,6 +69,7 @@ class Slider extends React.Component {
             <div>
 
                 <SliderWrapper>
+                <h1>Featured Items</h1>
                     <SliderInfo>
                         <Coverflow width={1060}
                             height={480}
@@ -75,16 +77,19 @@ class Slider extends React.Component {
                             navigation={false}
                             enableHeading={false}
                         >
+                             
                             {this.props.foods.map((food) => {
                                 return (
-                                    <div key={food.id}>
-                                        <img src={food.item_photo}/>
+                                    <div>
+                                        <div key={food.id}>
+                                        <img src={food.item_photo} />
                                         <li>{food.chef_name}</li>
                                         <li>{food.recipe_title}</li>
                                         <li>{food.chef_location}</li>
 
 
 
+                                    </div>
                                     </div>
 
                                 )
