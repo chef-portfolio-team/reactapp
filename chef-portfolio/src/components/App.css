@@ -2,7 +2,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  font-family: 'Londrina Shadow', cursive;
+  font-family: 'Lobster', cursive;
   background-color: #2d3436;
   background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
   color:white;
@@ -45,10 +45,48 @@
 
 .header h1{
   color: white;
+  text-decoration: underline black;
+
 }
 
-.header button{
+.featured-foods{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.new-recipes {
+  display: flex;
+  flex-direction: column;
+}
+
+.chef-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .header button i{
 height:100px;
@@ -60,10 +98,18 @@ width: 100px;
   flex-direction: row;
   justify-content: space-around;
   justify-content: center;
-  
+  margin-top: 40px;
+  padding: 40px 0 40px 0;
+  background: rgba(43, 43, 43, 0.1)
 }
 
 .footer-item-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.footer-connect-container {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -74,14 +120,34 @@ width: 100px;
   flex-direction: column;
 }
 
+.footer-connect-container nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .footer-item-container nav a {
   font-size: 20px;
   text-decoration: none;
   color: white;
   font-weight: bold;
+  padding: 5px 0;
+}
+
+.footer-connect-container nav a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
 }
 
 .footer-item-container h3 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.footer-connect-container h3 {
   font-weight: bold;
   font-size: 30px;
 }
