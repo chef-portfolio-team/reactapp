@@ -30,7 +30,7 @@ class Recipes extends React.Component {
                         return (
                             <div className='recipe-content-container'>
                                 <div key={food.id}>
-                                    <img src={food.item_photo} />
+                                    <img  src={food.item_photo} />
                                     <p>{food.chef_name}</p>
                                     <p>{food.recipe_title}</p>
                                     <p>{food.chef_location}</p>
