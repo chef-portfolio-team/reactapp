@@ -31,6 +31,8 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    width: 95%;
+    border: 1px solid green;
 }
 
 .recipe-info {
@@ -40,6 +42,7 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    
 }
 
 .recipe-content-container {
@@ -48,6 +51,8 @@
     align-items: center;
     flex-direction: row;
     justify-content: center;
+    margin: 10px;
+    background-color: rgb(59, 59, 59);
 }
 
 .recipe-content-container img {
