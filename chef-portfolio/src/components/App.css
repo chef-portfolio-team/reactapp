@@ -39,8 +39,8 @@
   justify-content: space-between;
   padding: 20px;
   background-color: black;
-  border:2px solid red;
   color:white;
+  height:60px;
 }
 
 .header h1{

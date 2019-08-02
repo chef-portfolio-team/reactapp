@@ -7,8 +7,10 @@ class RecipeForm extends React.Component {
     state = {
         chef_name: '',
         recipe_title: '',
+        item_photo: '',
         chef_location: '',
-        ingredients: '',
+        item_ingredients: '',
+        user_id: '',
     }
 
      handleChange = e => {
@@ -25,7 +27,8 @@ class RecipeForm extends React.Component {
                 chef_name: '',
                 recipe_title: '',
                 chef_location: '',
-                ingredients: '',
+                item_ingredients: '',
+                user_id: '',
         })
     }
      render() {
@@ -35,7 +38,7 @@ class RecipeForm extends React.Component {
                     <input type='text' name='chef_name' placeholder='Chef Name' value={this.state.chef_name} onChange={this.handleChange} />
                     <input type='text' name='recipe_title' placeholder='Recipe Title' value={this.state.recipe_title} onChange={this.handleChange} />
                     <input type='text' name='chef_location' placeholder='Chef Location' value={this.state.chef_location} onChange={this.handleChange} />
-                    <input type='text' name='ingredients' placeholder='Ingredient' value={this.state.ingredients} onChange={this.handleChange} />
+                    <input type='text' name='item_ingredients' placeholder='Ingredient' value={this.state.item_ingredients} onChange={this.handleChange} />
                     <button onClick={this.addNewFood}>Create New Recipe</button>
                 </form>
             </div>
