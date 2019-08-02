@@ -31,6 +31,32 @@ export default function(state = initialState, action) {
                 error: action.payload
             
             }
+
+        case ADD_FOOD:
+            return {
+            ...state,
+            fetchingFood: false,
+            addingFood: true,
+            error: '',
+        }
+        
+        case ADD_FOOD_SUCCESS:
+            return {
+            ...state,
+            foods: action.payload,
+            fetchingFood: false,
+            addingFood: false,
+            error: '',
+        }
+        
+        case ADD_FOOD_FAILED:
+            return {
+            ...state,
+            fetchingFood: false,
+            addingFood: false,
+            error: action.payload,
+        }
+
         default:
             return state
     }

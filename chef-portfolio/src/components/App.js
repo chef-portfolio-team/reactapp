@@ -62,16 +62,16 @@ class App extends React.Component {
       <div className='contact'>
         <Route path='/team-contact' exact render={(props) => <Contact {...props} />} className='team-contact-route'/>
       </div>
-      <div className='login'>
+      {/* <div className='login'>
         <Route path='/login' exact render={(props) => <Login {...props} />} className='login-contact-route'/>
-      </div>
-      <div className='register'>
+      </div> */}
+      {/* <div className='register'>
         <Route path='/register' exact render={(props) => <Register {...props} />} className='register-contact-route'/>
-      </div>
+      </div> */}
         </div>
 
         {/* Footer */}
-      {/* <div className='footer'>
+      <div className='footer'>
         <div className='footer-item-container'>
           <h3>About</h3>
           <nav>
@@ -90,7 +90,7 @@ class App extends React.Component {
                 <a href='https://www.instagram.com/' class="fa fa-instagram"></a>
             </nav>
         </div>
-      </div> */}
+      </div>
         </Router>
 
       

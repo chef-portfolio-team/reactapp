@@ -32,7 +32,7 @@ export const getFood = () => dispatch => {
 export const addFood = newFood => dispatch => {
     dispatch({ type: ADD_FOOD })
     axios
-      .post('http://localhost:3333/foods', newFood)
+      .post('https://chef-portfolio-webtp6.herokuapp.com/api/posts/all', newFood)
       .then(response => {
         dispatch({ type: ADD_FOOD_SUCCESS, payload: response.data })
       })
