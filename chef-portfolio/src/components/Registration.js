@@ -21,6 +21,7 @@ class Register extends Component {
         this.props.register(this.state);
     }
 
+
     render() {
         console.log(this.state, "from Register")
         return (
@@ -31,7 +32,7 @@ class Register extends Component {
                     <input type="text" placeholder="Password" value={this.state.password} name="password" onChange={this.changeHandler}></input>
                     <input type="text" placeholder="Email" value={this.state.email} name="email" onChange={this.changeHandler}></input>
                     <input type="text" placeholder="Location" value={this.state.location} name="location" onChange={this.changeHandler}></input>
-                <button>Submit</button>
+                <button >Submit</button>
                 </form>
             </div>
         );

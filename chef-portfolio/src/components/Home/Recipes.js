@@ -29,7 +29,7 @@ class Recipes extends React.Component {
                     {this.props.foods.map((food) => {
                         return (
                             <div className='recipe-content-container'>
-                                <div key={food.id}>
+                                <div >
                                     <img  src={food.item_photo} />
                                     <p>{food.chef_name}</p>
                                     <p>{food.recipe_title}</p>
