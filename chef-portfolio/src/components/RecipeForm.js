@@ -10,7 +10,7 @@ class RecipeForm extends React.Component {
         item_photo: '',
         chef_location: '',
         item_ingredients: '',
-        user_id: '',
+        user_id: 1,
     }
 
      handleChange = e => {
@@ -20,20 +20,12 @@ class RecipeForm extends React.Component {
      addNewFood= e => {
         e.preventDefault()
         
-        const newFood = this.state
-        
-        this.props.addFood(newFood)
-            this.setState({
-                chef_name: '',
-                recipe_title: '',
-                chef_location: '',
-                item_ingredients: '',
-                user_id: '',
-        })
+        this.props.addFood(this.state)
     }
      render() {
+        console.log(this.state, "from RecipeForm")
         return (
-            <div>
+            <div className='recipe-form'>
                 <form onSubmit={this.addNewFood}>
                     <input type='text' name='chef_name' placeholder='Chef Name' value={this.state.chef_name} onChange={this.handleChange} />
                     <input type='text' name='recipe_title' placeholder='Recipe Title' value={this.state.recipe_title} onChange={this.handleChange} />

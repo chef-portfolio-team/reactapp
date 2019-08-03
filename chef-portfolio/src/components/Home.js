@@ -8,13 +8,13 @@ import './Home/Home.css'
 function Home (){
     return (
       <div>
-        <div>
+        <div className='slider-container-home'>
           <Slider />
         </div>
-        <div>
+        <div className='recipe-form-container-home'>
           <RecipeForm />
         </div>
-        <div>
+        <div className='recipes-container-home'>
           <Recipes />
         </div>
       </div>
