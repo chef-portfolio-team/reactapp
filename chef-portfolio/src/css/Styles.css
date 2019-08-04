@@ -14,7 +14,7 @@ body {
   text-align: center;
 
   /* Prevent sidebar from showing a scrollbar on page */
-  overflow: hidden !important;
+  overflow: auto;
   height:100px;
 }
 
@@ -61,6 +61,7 @@ body {
 /* Color/shape of close button cross */
 .bm-cross {
   background: #bdc3c7;
+  margin-left:-8px;
 }
 
 /* General sidebar styles */
@@ -68,6 +69,8 @@ body {
   background: #373a47;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+ margin-right:60px;
+ /* margin-left:50px; */
 }
 
 /* Morph shape necessary with bubble or elastic */

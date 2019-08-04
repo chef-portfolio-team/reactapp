@@ -7,7 +7,7 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 20px 30px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 90%;
     height: 2000px;
     font-family: 'Londrina Shadow', cursive;
@@ -32,7 +32,7 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 95%;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .recipe-info {
