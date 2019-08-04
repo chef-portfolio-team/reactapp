@@ -32,8 +32,8 @@ class App extends React.Component {
 
             {/* Header */}
             <div className='header'>
-            <SideBar/>
-              <div className='hamburger'>
+              <SideBar/>
+            <div className='hamburger'>
               
                 <img src={Logo} />
               </div>
@@ -44,6 +44,29 @@ class App extends React.Component {
               <Route path='/Register' component={Register} />
             </Switch>
 
+          {/* Components */}
+      <div className='about'  >
+        <Route path='/about' exact render={(props) => <About {...props} />} className='about-route'/>
+      </div>
+      <div className='chef-contact'  >
+        <Route path='/chef-contact' exact render={(props) => <ChefContact {...props} />} className='chef-contact-route'/>
+      </div>
+      <div className='team'>
+        <Route path='/team' exact render={(props) => <Team {...props} />} className='team-route'/>
+      </div>
+      <div className='contact'>
+        <Route path='/team-contact' exact render={(props) => <Contact {...props} />} className='team-contact-route'/>
+      </div>
+      {/* <div className='login'>
+        <Route path='/login' exact render={(props) => <Login {...props} />} className='login-contact-route'/>
+      </div> */}
+      {/* <div className='register'>
+        <Route path='/register' exact render={(props) => <Register {...props} />} className='register-contact-route'/>
+      </div> */}
+        </div>
+
+        {/* Footer */}
+      <div className='footer'>
             {/* Components */}
             <div className='about'  >
               <Route path='/about' exact render={(props) => <About {...props} />} className='about-route' />
@@ -57,16 +80,16 @@ class App extends React.Component {
             <div className='contact'>
               <Route path='/team-contact' exact render={(props) => <Contact {...props} />} className='team-contact-route' />
             </div>
-            <div className='login'>
+            {/* <div className='login'>
               <Route path='/login' exact render={(props) => <Login {...props} />} className='login-contact-route' />
             </div>
             <div className='register'>
               <Route path='/register' exact render={(props) => <Register {...props} />} className='register-contact-route' />
-            </div>
+            </div> */}
           </div>
 
           {/* Footer */}
-          {/* <div className='footer'>
+          <div className='footer'>
         <div className='footer-item-container'>
           <h3>About</h3>
           <nav>
@@ -85,7 +108,7 @@ class App extends React.Component {
                 <a href='https://www.instagram.com/' class="fa fa-instagram"></a>
             </nav>
         </div>
-      </div> */}
+        </div>
         </Router>
 
 

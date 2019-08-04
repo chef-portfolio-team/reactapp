@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+import { token } from '../token'
+
 export const FETCHING = 'FETCHING'
 export const FETCHING_SUCCESS = 'FETCHING_SUCCESS'
 export const FETCHING_FAILED = 'FETCHING_FAILED'
@@ -31,11 +33,14 @@ export const getFood = () => dispatch => {
 
 export const addFood = newFood => dispatch => {
     dispatch({ type: ADD_FOOD })
+    const config = {
+      headers: {
+        Authorization: window.localStorage.token
+      }
+    }
     axios
-      .post('http://localhost:3333/foods', newFood)
-      .then(response => {
-        dispatch({ type: ADD_FOOD_SUCCESS, payload: response.data })
-      })
+      .post('https://chef-portfolio-webtp6.herokuapp.com/api/posts/', newFood, config)
+      .then( () => getFood()(dispatch))
       .catch(err => {
         dispatch({ type: ADD_FOOD_FAILED, payload: err })
       })
