@@ -4,7 +4,7 @@ import '../About/About.css'
 const Team = teamInfo => {
     return (
         <div className='team-container'>
-            <h1>This Is Out Team</h1>
+            <h1>This Is Our Team</h1>
             <div className='portfolio'>
                 <h1>Front End</h1>
                 <div className='teammate'>

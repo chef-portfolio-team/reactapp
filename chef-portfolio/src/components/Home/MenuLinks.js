@@ -33,7 +33,7 @@ export default props => {
         <li><Link to={'/Login'} className="nav-link">Login</Link></li>
         <li><Link to={'/Register'} className="nav-link">Register</Link></li>
         <li><Link to={'/chef-contact'} className="nav-link">Contact</Link></li>
-        <li><Link to={'/team'} className="nav-link">Team</Link></li>
+        <li><Link to={'/team-contact'} className="nav-link">Team</Link></li>
         <li><Link to={'/about'} className="nav-link">About</Link></li>
       </StyledList>
 
